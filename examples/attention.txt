@@ -1,0 +1,9 @@
+  issue                 code     name                                board                    owner       due       
+  --------------------  -------  ----------------------------------  -----------------------  ----------  ----------
+  action-date-missing   ACT-04   Prepare continuity exercise date    Banksia Services board   Theo Price            
+  minutes-missing       NZ-OLD   Annual policy review                Kowhai Components board  Aroha Lane  2026-07-28
+  minutes-unsigned      AU-LAST  Audit committee review              Banksia Services board   Mina Reed   2026-08-27
+  interest-review       INT-01   Supplier advisory role              Kowhai Components board  Iris Tan    2026-09-21
+  action-overdue        ACT-03   Reconcile audit actions             Banksia Services board   Mina Reed   2026-10-11
+  action-overdue        ACT-01   Prepare supplier alternatives       Kowhai Components board  Theo Price  2026-10-18
+  action-owner-missing  ACT-02   Confirm insurance renewal evidence  Kowhai Components board              2026-10-30

@@ -1,11 +1,62 @@
 [
   {
-    "name": "example",
-    "title": "TODO(author): the first document this industry must produce",
-    "for_each": "select gen_random_uuid() as id, 'Example' as name",
+    "name": "meeting-pack",
+    "title": "Meeting preparation pack",
+    "for_each": "select id,code as name from meetings where state='planned'",
     "file": "name",
     "sections": [
-      { "title": "Details", "sql": "select 'replace me' as item, $1::text as record_id" }
+      {
+        "title": "Meeting",
+        "layout": "record",
+        "sql": "select code,name,held_on,chair,location from meetings where id=$1"
+      },
+      {
+        "title": "Agenda",
+        "sql": "select position,name,presenter,purpose,paper_ref from agenda_items where meeting_id=$1 order by position"
+      },
+      {
+        "title": "Board follow-up",
+        "sql": "select code,name,owner,due_on,status from actions where board_id=(select board_id from meetings where id=$1) and status not in ('done','cancelled') order by due_on"
+      }
+    ]
+  },
+  {
+    "name": "minutes-record",
+    "title": "Minutes record",
+    "for_each": "select id,code as name from meetings where state='held'",
+    "file": "name",
+    "sections": [
+      {
+        "title": "Meeting",
+        "layout": "record",
+        "sql": "select code,name,held_on,chair from meetings where id=$1"
+      },
+      {
+        "title": "Attendance",
+        "sql": "select name,role,present from attendance where meeting_id=$1 order by name"
+      },
+      {
+        "title": "Latest minute record",
+        "layout": "record",
+        "sql": "select version,body,recorded_on,author,signed_by,signed_on,signature_ref from minutes where meeting_id=$1 order by version desc limit 1",
+        "note": "Recorded signature evidence is a reference, not an electronic signature service. Missing fields remain unconfirmed."
+      },
+      {
+        "title": "Decision register",
+        "sql": "select code,name,outcome,evidence from resolutions where meeting_id=$1 order by code"
+      }
+    ]
+  },
+  {
+    "name": "interests-register",
+    "title": "Board interests register",
+    "for_each": "select id,name from boards",
+    "file": "name",
+    "sections": [
+      {
+        "title": "Declarations and disclosure evidence",
+        "sql": "select code,director,name,details,declared_on,disclosed_on,review_on,evidence from interests where board_id=$1 order by director,code"
+      }
     ]
   }
 ]

@@ -1,13 +1,41 @@
 [
   {
     "name": "week",
-    "title": "This week",
-    "subtitle": "Board Governance for Claude Code: what needs attention, rendered by npm run view",
+    "title": "Board week",
+    "subtitle": "Fictional demonstration business. Planned meetings and outstanding follow-up.",
     "sections": [
       {
-        "title": "Needs attention",
-        "note": "TODO(author): point this at the industry's attention view (overdue, stuck, quiet).",
-        "sql": "select 'replace me' as item, 'TODO(author)' as why"
+        "title": "Next meetings",
+        "sql": "select * from board_week"
+      },
+      {
+        "title": "Overdue actions",
+        "sql": "select code,name,board,owner,due_on,days_overdue from action_register where days_overdue>0 order by days_overdue desc"
+      }
+    ]
+  },
+  {
+    "name": "attention",
+    "title": "Secretary attention list",
+    "sections": [
+      {
+        "title": "Records requiring attention",
+        "sql": "select * from attention order by due nulls first,code"
+      },
+      {
+        "title": "Rule checks",
+        "sql": "select * from compliance_findings order by rule,code",
+        "note": "Evidence checks, not a certification of legal compliance."
+      }
+    ]
+  },
+  {
+    "name": "minute-book",
+    "title": "Minute book register",
+    "sections": [
+      {
+        "title": "Meetings and minutes",
+        "sql": "select code,name,board,held_on,minute_version,signed_on,first_recorded_on,retention_until from meeting_register where state='held' order by held_on"
       }
     ]
   }

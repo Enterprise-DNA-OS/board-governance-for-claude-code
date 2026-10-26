@@ -1,0 +1,9 @@
+{
+  "id": "Action ID",
+  "name": "Action",
+  "owner": "Assignee(s)",
+  "due": "Due date",
+  "status": "Status",
+  "committee": "Committee",
+  "meeting": "Minutes title"
+}

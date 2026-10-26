@@ -1,0 +1,106 @@
+[
+  {
+    "question": "Which owners have overdue actions across boards?",
+    "answer": [
+      {
+        "owner": "Mina Reed",
+        "overdue": 1,
+        "oldest_days": 15
+      },
+      {
+        "owner": "Theo Price",
+        "overdue": 1,
+        "oldest_days": 8
+      }
+    ]
+  },
+  {
+    "question": "Which decisions still have unfinished follow-up?",
+    "answer": [
+      {
+        "code": "RES-01",
+        "name": "Review supplier alternatives",
+        "open_actions": 1
+      }
+    ]
+  },
+  {
+    "question": "Which upcoming decisions have no supporting paper?",
+    "answer": [
+      {
+        "meeting": "NZ-NEXT",
+        "name": "Capital allocation review",
+        "presenter": "Iris Tan"
+      }
+    ]
+  },
+  {
+    "question": "Which meetings have unsigned latest minutes?",
+    "answer": [
+      {
+        "code": "AU-LAST",
+        "name": "Audit committee review",
+        "board": "Banksia Services board",
+        "held_on": "2026-08-27"
+      }
+    ]
+  },
+  {
+    "question": "Which Australian meetings were recorded late?",
+    "answer": [
+      {
+        "code": "AU-LAST",
+        "name": "Audit committee review",
+        "first_recorded_on": "2026-10-16",
+        "au_record_due": "2026-09-27"
+      }
+    ]
+  },
+  {
+    "question": "Which NZ meetings have a retention gap?",
+    "answer": [
+      {
+        "code": "NZ-OLD",
+        "name": "Annual policy review",
+        "held_on": "2026-07-28",
+        "retention_until": null
+      }
+    ]
+  },
+  {
+    "question": "Which recorded meetings were below configured quorum?",
+    "answer": [
+      {
+        "code": "NZ-OLD",
+        "name": "Annual policy review",
+        "present_directors": 0,
+        "quorum": 3
+      },
+      {
+        "code": "AU-LAST",
+        "name": "Audit committee review",
+        "present_directors": 1,
+        "quorum": 2
+      }
+    ]
+  },
+  {
+    "question": "Which declared interests still need disclosure evidence?",
+    "answer": [
+      {
+        "code": "INT-01",
+        "name": "Supplier advisory role",
+        "director": "Iris Tan",
+        "declared_on": "2025-09-21"
+      }
+    ]
+  },
+  {
+    "question": "Which imported actions still lack an owner or date?",
+    "answer": []
+  },
+  {
+    "question": "Which people have both overdue actions and overdue interests?",
+    "answer": []
+  }
+]

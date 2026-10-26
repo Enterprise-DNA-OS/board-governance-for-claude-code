@@ -1,24 +1,7 @@
-# Why there is no front end
+# The secretary acts; reports show the record
 
-Diligent Boards is a database with a subscription. The tables underneath it are ordinary: a few entities, a few relationships, a handful of workflows you repeat every week. What you pay for is the layer on top that lets people who do not write SQL get at those tables. Screens, filters, dashboards, forms.
+Board Governance for Claude Code is a database operated through one CLI and short agent recipes. The secretary asks for next week's agenda, unsigned minutes or overdue actions. The agent reads the records and presents an answer or a draft. Read-only HTML packs and dashboards make the results easy to review and print.
 
-That layer used to be the whole product, because talking to a database was hard. It is not hard any more. Open this folder in Claude Code, describe what you want, and it writes the query, runs it, and explains the answer. Ask a question the dashboard never had a chart for and you still get an answer.
+A director portal provides a different experience: mobile reading, offline annotations, document-level permissions, authenticated votes, signature collection and notifications. This base does not provide those features. It serves a trusted secretary working with evidence already collected. Enterprise DNA can build the access model, screens and connections your board needs as scoped work through Omni by Enterprise DNA.
 
-## What you gain
-
-- **Better answers.** A dashboard shows what the vendor decided to chart. Here you ask your own question, in your own words, and get it answered against your own data.
-- **No seats.** Everyone who needs to look can look. The bill does not grow with headcount.
-- **Your data in your Postgres.** Plain tables. Back them up, query them from anything, leave any time. There is no export step because there is nothing to leave.
-- **A process that matches you.** When your way of working changes, you add a command. You do not wait for a feature request to clear.
-
-## What you give up
-
-- **A visual board.** Stages are a table you ask about, not cards you drag.
-- **A phone app.** It runs where Claude Code runs.
-- **A vendor help desk.** This is open source. Enterprise DNA supports the installed version for businesses that want someone to call.
-
-## Who this fits
-
-Small teams who already use Claude Code, or who would rather learn to ask than learn another interface. If your team needs a screen to look at all day, keep Diligent Boards. If you need the answers more than the screens, this is cheaper, faster and yours.
-
-Installed and run for you: https://enterprisedna.co/omni/instead-of/diligent-boards
+No automatic emails, meeting invitations or public links are created. Report files contain business information and need protected storage. Keeping a local copy alone does not prove confidentiality, legal retention or recoverability.

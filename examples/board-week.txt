@@ -1,0 +1,4 @@
+  code     name                        board                    held_on     chair       agenda_items  missing_decision_papers
+  -------  --------------------------  -----------------------  ----------  ----------  ------------  -----------------------
+  NZ-NEXT  Quarterly strategy meeting  Kowhai Components board  2026-11-02  Aroha Lane  2             1                      
+  AU-NEXT  Risk review                 Banksia Services board   2026-11-05  Mina Reed   1             0                      
